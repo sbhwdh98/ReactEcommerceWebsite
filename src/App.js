@@ -19,6 +19,8 @@ function App() {
   Step 3 :  chai flashCard ma xa button ma
 
   Step 4 :  addToCart lai chai pass garne using props in pages and cart components
+
+  test
   */
 
   //Step 1 :
