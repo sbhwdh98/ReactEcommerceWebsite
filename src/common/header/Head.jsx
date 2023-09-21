@@ -19,9 +19,6 @@ const Head = () => {
             <span>🏳️‍⚧️</span>
             <label>USD</label>
           </div>
-          {/* 
-            https://www.youtube.com/watch?v=K3L8J0DbuT8 5:45
-         */}
         </div>
       </section>
     </>
