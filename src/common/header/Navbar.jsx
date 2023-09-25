@@ -15,9 +15,9 @@ const Navbar = () => {
         </div>
         <div className="navlink">
           <ul className={MobileMenu ? "nav-links-MobileMenu" : "link f_flex capitalize"} onClick={() => setMobileMenu(false)}>
-            {/* https://www.youtube.com/watch?v=K3L8J0DbuT8&t=14m24s */}
+            {/* https://www.youtube.com/watch?v=K3L8J0DbuT8&t=22m5s */}
+              {/* Link: npm i react-router-dom */}
             <li>
-              {/* npm i react-router-dom */}
               <Link to='/'>home</Link>
             </li>
             <li>
