@@ -5,7 +5,7 @@ const Navbar = () => {
   const [MobileMenu, setMobileMenu] = useState(false)
   return (
     <>
-      <header className="header"></header>
+      <header className="header">
       <div className="container d_flex">
         <div className="categories d_flex">
           <span className="fa-solid fa-border-all"></span>
@@ -37,10 +37,11 @@ const Navbar = () => {
             </li>
           </ul>
           <button className="toggle" onClick={() => setMobileMenu(!MobileMenu)}>
-            {MobileMenu ? <i className="fas fa-times close home-btn"></i> : <i className="fas fa-bars open"></i>}
+            {MobileMenu ? <i className="fa-solid fa-xmark close home-btn"></i> : <i className="fa fa-bars open"></i> }
           </button>
         </div>
       </div>
+      </header>
     </>
   )
 }

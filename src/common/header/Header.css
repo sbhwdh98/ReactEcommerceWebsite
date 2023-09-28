@@ -125,7 +125,7 @@ header ul li a:hover {
   header ul {
     padding-top: 30px;
   }
-  .nav-links-mobile {
+  .nav-links-MobileMenu {
     position: absolute;
     display: block;
     list-style: none;
@@ -160,7 +160,7 @@ header ul li a:hover {
   .close {
     right: 45%;
   }
-  .close.home-btn {
+  .close .home-btn {
     background: linear-gradient(145deg, #e2e8ec, #ffffff);
     color: #ff014f;
     border-radius: 50%;
@@ -169,7 +169,7 @@ header ul li a:hover {
     height: 60px;
     line-height: 60px;
   }
-  .header.active {
+  .header .active {
     height: 10vh;
   }
 }

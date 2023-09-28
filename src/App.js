@@ -20,14 +20,11 @@ function App() {
 
   Step 4 :  addToCart lai chai pass garne using props in pages and cart components
   */
-
   //Step 1 :
   const { productItems } = Data
   const { shopItems } = Sdata
-
   //Step 2 :
   const [CartItem, setCartItem] = useState([])
-
   //Step 4 :
   const addToCart = (product) => {
     // if hamro product alredy cart xa bhane  find garna help garxa
@@ -46,7 +43,6 @@ function App() {
       setCartItem([...CartItem, { ...product, qty: 1 }])
     }
   }
-
   // Stpe: 6
   const decreaseQty = (product) => {
     // if hamro product alredy cart xa bhane  find garna help garxa
@@ -69,30 +65,18 @@ function App() {
 
   return (
     <>
-      {/* <Router>
-        <Header CartItem={CartItem} />
-        <Routes>
-          {/* <Route path='/' exact>
-            <Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />
-          </Route> */}
-          {/* <Route path='/cart' exact>
-            <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />
-          </Route> */}
-        </Routes>
-        <Footer />
-      </Router> */}
       <Router>
         <Header />
         <Routes>
           <Route path="/" element=
             {<Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />}
           />
-          <Route path="/cart" element=
+          {/*<Route path="/cart" element=
             {<Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />}
-          />
+          /> */}
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
     </>
   )
 }
