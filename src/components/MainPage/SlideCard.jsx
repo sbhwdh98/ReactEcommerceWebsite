@@ -12,7 +12,7 @@ const SlideCard = () => {
     slidesToScroll: 1,
     autoplay: true,
     appendDots: (dots) => {
-      return <ul style={{ margin: "0px" }}>{dots}</ul>
+      return <ul style={{ margin: '0px' }}>{dots}</ul>
     },
   }
   return (
@@ -20,18 +20,16 @@ const SlideCard = () => {
       <Slider {...settings}>
         {Sdata.map((value, index) => {
           return (
-            <>
-              <div className='box d_flex top' key={index}>
-                <div className='left'>
-                  <h1>{value.title}</h1>
-                  <p>{value.desc}</p>
-                  <button className='btn-primary'>Visit Collections</button>
-                </div>
-                <div className='right'>
-                  <img src={value.cover} alt='' />
-                </div>
+            <div className="box d_flex top" key={index}>
+              <div className="left">
+                <h1>{value.title}</h1>
+                <p>{value.desc}</p>
+                <button className="btn-primary">Visit Collections</button>
               </div>
-            </>
+              <div className="right">
+                <img src={value.cover} alt="" />
+              </div>
+            </div>
           )
         })}
       </Slider>
@@ -40,3 +38,6 @@ const SlideCard = () => {
 }
 
 export default SlideCard
+
+{/* npm install react-slick --save */ }
+{/* npm install slick-carousel --save */ }
