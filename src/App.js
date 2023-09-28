@@ -19,8 +19,6 @@ function App() {
   Step 3 :  chai flashCard ma xa button ma
 
   Step 4 :  addToCart lai chai pass garne using props in pages and cart components
-
-  test
   */
 
   //Step 1 :
@@ -71,7 +69,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      {/* <Router>
         <Header CartItem={CartItem} />
         <Routes>
           {/* <Route path='/' exact>
@@ -82,7 +80,19 @@ function App() {
           </Route> */}
         </Routes>
         <Footer />
+      </Router> */}
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element=
+            {<Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />}
+          />
+          <Route path="/cart" element=
+            {<Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />}
+          />
+        </Routes>
       </Router>
+      <Footer />
     </>
   )
 }
