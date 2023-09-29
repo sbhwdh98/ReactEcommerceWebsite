@@ -27,23 +27,23 @@ function App() {
   const [CartItem, setCartItem] = useState([])
   //Step 4 :
   const addToCart = (product) => {
-    // if hamro product alredy cart xa bhane  find garna help garxa
-    const productExit = CartItem.find((item) => item.id === product.id)
-    // if productExit chai alredy exit in cart then will run fun() => setCartItem
-    // ani inside => setCartItem will run => map() ani yo map() chai each cart ma
-    // gayara check garxa if item.id ra product.id chai match bhayo bhane
-    // productExit product chai display garxa
-    // ani increase  exits product QTY by 1
-    // if item and product doesnt match then will add new items
-    if (productExit) {
-      setCartItem(CartItem.map((item) => (item.id === product.id ? { ...productExit, qty: productExit.qty + 1 } : item)))
+    // if hamara product already cart me hai to find product
+    const productExist = CartItem.find((item) => item.id === product.id);
+    // if productExist then will run function setCartItem
+    // setCartItem will run map() aur map() each cart me jayega aur cheeck karega
+    // jiska item.id product.id same ho
+    // productExist me product ka detail hoga
+    // aur existing product ka QTY increase by 1
+    // if item and product doesnt match then will return original items
+    if (productExist) {
+      setCartItem(CartItem.map((item) =>
+        (item.id === product.id ? { ...productExist, qty: productExist.qty + 1 } : item)))
     } else {
       // but if the product doesnt exit in the cart that mean if card is empty
       // then new product is added in cart  and its qty is initalize to 1
-      setCartItem([...CartItem, { ...product, qty: 1 }])
     }
   }
-  // Stpe: 6
+  // Step: 6
   const decreaseQty = (product) => {
     // if hamro product alredy cart xa bhane  find garna help garxa
     const productExit = CartItem.find((item) => item.id === product.id)
@@ -66,14 +66,14 @@ function App() {
   return (
     <>
       <Router>
-        <Header />
+        <Header CartItem={CartItem} />
         <Routes>
           <Route path="/" element=
             {<Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />}
           />
-          {/*<Route path="/cart" element=
+          <Route path="/cart" element=
             {<Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />}
-          /> */}
+          />
         </Routes>
         <Footer />
       </Router>
