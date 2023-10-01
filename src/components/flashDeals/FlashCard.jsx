@@ -42,7 +42,7 @@ const FlashCard = ({ productItems, addToCart }) => {
   return (
     <>
       <Slider {...settings}>
-        {productItems.map((productItems, addToCart) => {
+        {productItems.map((productItems) => {
           return (
             <>
               <div className="box">

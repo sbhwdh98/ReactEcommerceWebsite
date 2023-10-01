@@ -14,7 +14,7 @@ const Cart = ({ CartItem, addToCart, decreaseQty }) => {
             {CartItem.length === 0 &&
               <h1 className="no-items product">No items are added in cart</h1>}
             {CartItem.map((item) => {
-                const productQty = item.price * item.productQty
+                const productQty = item.price * item.qty
                 return (
                   <div className="cart-list product d_flex">
                     <div className="img">
