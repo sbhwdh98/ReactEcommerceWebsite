@@ -1,6 +1,6 @@
 import React from "react"
-import "./style.css"
 import TopCart from "./TopCart"
+import "./style.css"
 
 const TopCate = () => {
   return (
